@@ -1,0 +1,9 @@
+.git
+.venv
+build-output
+local-results
+config/cluster.env
+**/__pycache__
+**/*.pyc
+**/*.log
+results

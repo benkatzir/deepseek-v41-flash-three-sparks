@@ -1,0 +1,33 @@
+DeepSeek V4.1 Flash three-Spark research recipe
+
+Original packaging and integration modifications: Copyright (c) 2026 Ben Katzir.
+Distributed under AGPL-3.0-or-later, except separately identified upstream
+components that retain their original licenses. See LICENSE and licenses/.
+
+This distribution builds on MiaAI-Lab/DeepSeek-v4.1-Flash-DGX-Sparks,
+commit fba44707a12026a7bf92c85b234e5aa44923fc14. Its original notice is retained
+in src/mia-native/NOTICE, including Copyright (C) 2026 zurih. That recipe derives
+from 0xSero/deepseek-v4.1-flash-4x-rtx-pro-6000 (MIT; Copyright (c) 2026 0xSero).
+
+SGLang-derived runtime files remain Apache-2.0. The fixed SGLang base is
+lmsysorg/sglang@sha256:b4a4745fab5393dc0aca573fe754b86477f57691c9e971390b21102d3d94ebf9
+(ARM64, SGLang source da64c5cbb8cf6bfd39be19da43573fdfd484c43a).
+
+The bundled cuda-exl3 extension and corresponding source come from
+https://github.com/Zeuss5/cuda-exl3 at
+6a1ffc34866e23f484574ce1922a8bca93eb33b2 (MIT).
+Its license and NOTICE, including ExLlamaV3 attribution, are retained in
+licenses/cuda-exl3-LICENSE and licenses/cuda-exl3-NOTICE.
+
+Cooperative kernels derive from ExLlamaV3, https://github.com/turboderp-org/exllamav3,
+commit 02aef45cd681b960a00afcd0749a4ab99e6c1bfe (MIT; Copyright (c) 2025 Turboderp).
+The complete upstream source archive and local kernel modifications are included.
+See licenses/exllamav3-LICENSE. Runtime binaries retain fixed content hashes;
+recompilation is supported for inspection but produces unqualified artifacts.
+
+DeepSeek and Pollard checkpoint weights are downloaded separately and are not
+redistributed here. Their respective model licenses remain applicable.
+PyTorch, CUDA, FlashInfer, NCCL, and other container dependencies retain their
+upstream licenses. This source reconstruction has a distinct image identity
+from the historical experiments; historical benchmark results do not certify
+an independently rebuilt image or a different cluster.
