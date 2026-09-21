@@ -1,0 +1,710 @@
+{
+  "schema": "three-spark-public-quality-pilot.v1",
+  "date_utc": "2026-09-18",
+  "runtime_id": "hybrid-pollard-coop-targetK3-static5-v020-qos0-warm0",
+  "baseline": "Published native MXFP4 checkpoint and native K6 routing on the local adapted three-Spark stack; not BF16 and not an unmodified publisher runtime.",
+  "totals": {
+    "n": 192,
+    "native_correct": 157,
+    "candidate_correct": 157,
+    "paired_counts": {
+      "both_correct": 152,
+      "native_only": 5,
+      "candidate_only": 5,
+      "both_wrong": 30
+    }
+  },
+  "domains": [
+    {
+      "domain": "text",
+      "dataset": "TIGER-Lab/MMLU-Pro",
+      "n": 64,
+      "native_correct": 53,
+      "candidate_correct": 53,
+      "paired_counts": {
+        "both_correct": 52,
+        "native_only": 1,
+        "candidate_only": 1,
+        "both_wrong": 10
+      },
+      "native_score_diagnostics": {
+        "n": 64,
+        "correct": 53,
+        "accuracy": 0.828125,
+        "transport_errors": 0,
+        "unparsed": 4,
+        "length_limited": 4
+      },
+      "candidate_score_diagnostics": {
+        "n": 64,
+        "correct": 53,
+        "accuracy": 0.828125,
+        "transport_errors": 0,
+        "unparsed": 4,
+        "length_limited": 4
+      },
+      "stratum_sample_counts": {
+        "biology": 5,
+        "business": 5,
+        "chemistry": 5,
+        "computer science": 4,
+        "economics": 4,
+        "engineering": 4,
+        "health": 5,
+        "history": 4,
+        "law": 4,
+        "math": 5,
+        "other": 4,
+        "philosophy": 5,
+        "physics": 5,
+        "psychology": 5
+      }
+    },
+    {
+      "domain": "vision",
+      "dataset": "MMMU/MMMU",
+      "n": 64,
+      "native_correct": 44,
+      "candidate_correct": 44,
+      "paired_counts": {
+        "both_correct": 42,
+        "native_only": 2,
+        "candidate_only": 2,
+        "both_wrong": 18
+      },
+      "native_score_diagnostics": {
+        "n": 64,
+        "correct": 44,
+        "accuracy": 0.6875,
+        "transport_errors": 0,
+        "unparsed": 12,
+        "length_limited": 12
+      },
+      "candidate_score_diagnostics": {
+        "n": 64,
+        "correct": 44,
+        "accuracy": 0.6875,
+        "transport_errors": 0,
+        "unparsed": 13,
+        "length_limited": 13
+      },
+      "stratum_sample_counts": {
+        "Accounting": 2,
+        "Agriculture": 2,
+        "Architecture_and_Engineering": 3,
+        "Art": 2,
+        "Art_Theory": 2,
+        "Basic_Medical_Science": 2,
+        "Biology": 2,
+        "Chemistry": 2,
+        "Clinical_Medicine": 2,
+        "Computer_Science": 3,
+        "Design": 2,
+        "Diagnostics_and_Laboratory_Medicine": 3,
+        "Economics": 2,
+        "Electronics": 2,
+        "Energy_and_Power": 2,
+        "Finance": 2,
+        "Geography": 2,
+        "History": 2,
+        "Literature": 2,
+        "Manage": 3,
+        "Marketing": 2,
+        "Materials": 2,
+        "Math": 2,
+        "Mechanical_Engineering": 2,
+        "Music": 2,
+        "Pharmacy": 2,
+        "Physics": 2,
+        "Psychology": 2,
+        "Public_Health": 2,
+        "Sociology": 2
+      }
+    },
+    {
+      "domain": "coding",
+      "dataset": "openai/human-eval",
+      "n": 64,
+      "native_correct": 60,
+      "candidate_correct": 60,
+      "paired_counts": {
+        "both_correct": 58,
+        "native_only": 2,
+        "candidate_only": 2,
+        "both_wrong": 2
+      },
+      "technical_errors": 0
+    }
+  ],
+  "settings": {
+    "text_vision": {
+      "reasoning_effort": 75,
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "max_tokens": 8192,
+      "seed": 417,
+      "concurrency": 6,
+      "thinking": true
+    },
+    "coding": {
+      "temperature": 0,
+      "top_p": 1,
+      "max_tokens": 4096,
+      "reasoning_effort": 75,
+      "seed": 20260918,
+      "thinking": true,
+      "concurrency": 6,
+      "instruction_sha256": "d393ac38c2255080589d873b454fd284b75f23b1adf107dd1a187c43bee3245b"
+    }
+  },
+  "protocols": {
+    "text_vision": "local-v41-paired-zero-shot-mc-v1",
+    "coding": "dsv41.humaneval64.complete-module.v1"
+  },
+  "dataset_revisions": {
+    "TIGER-Lab/MMLU-Pro": "b189ec765aa7ed75c8acfea42df31fdae71f97be",
+    "MMMU/MMMU": "98e6ac0cb9b7b2cd2c991b85a50762edc4aedc68",
+    "openai/human-eval": "6d43fb980f9fee3c892a914eda09951f772ad10d"
+  },
+  "manifest_sha256": {
+    "text_vision": "7e1f8e05f705b2bd3a0842bb97d4ebc61376b4c753c4096decf55275816f5bcf",
+    "coding": "62cd0d185dcdba12db0a88cc5103483a5026599ab90f600b94dc568b20464d56"
+  },
+  "selection": {
+    "text_vision": "Equal stratum quotas (remainder allocated by seeded hash); lowest seeded ID hashes within each stratum.",
+    "coding": {
+      "method": "ascending SHA256 of seed:select:task_id, first64",
+      "seed": 20260918,
+      "count": 64
+    }
+  },
+  "case_ids": {
+    "text_vision": [
+      "mmlu-pro:3028",
+      "mmlu-pro:4994",
+      "mmmu:validation_Energy_and_Power_8",
+      "mmmu:validation_Physics_1",
+      "mmmu:validation_Agriculture_2",
+      "mmlu-pro:327",
+      "mmlu-pro:8296",
+      "mmlu-pro:6328",
+      "mmmu:validation_Diagnostics_and_Laboratory_Medicine_14",
+      "mmlu-pro:4827",
+      "mmlu-pro:11485",
+      "mmmu:validation_Biology_14",
+      "mmlu-pro:8653",
+      "mmlu-pro:4678",
+      "mmmu:validation_History_26",
+      "mmmu:validation_Art_27",
+      "mmlu-pro:5838",
+      "mmmu:validation_Sociology_21",
+      "mmmu:validation_Accounting_22",
+      "mmmu:validation_Finance_15",
+      "mmlu-pro:1216",
+      "mmlu-pro:3430",
+      "mmmu:validation_Pharmacy_15",
+      "mmmu:validation_Psychology_6",
+      "mmmu:validation_Math_2",
+      "mmmu:validation_Literature_2",
+      "mmmu:validation_Chemistry_28",
+      "mmmu:validation_Manage_8",
+      "mmmu:validation_Manage_5",
+      "mmlu-pro:2368",
+      "mmmu:validation_Biology_15",
+      "mmlu-pro:113",
+      "mmlu-pro:3189",
+      "mmmu:validation_Design_17",
+      "mmlu-pro:11115",
+      "mmlu-pro:4246",
+      "mmlu-pro:5789",
+      "mmlu-pro:3748",
+      "mmlu-pro:4629",
+      "mmlu-pro:2498",
+      "mmmu:validation_Diagnostics_and_Laboratory_Medicine_26",
+      "mmlu-pro:10212",
+      "mmlu-pro:8838",
+      "mmmu:validation_Mechanical_Engineering_19",
+      "mmmu:validation_Economics_30",
+      "mmmu:validation_Art_3",
+      "mmlu-pro:6343",
+      "mmlu-pro:10672",
+      "mmmu:validation_Pharmacy_28",
+      "mmlu-pro:645",
+      "mmlu-pro:9003",
+      "mmmu:validation_Architecture_and_Engineering_6",
+      "mmmu:validation_Accounting_20",
+      "mmlu-pro:244",
+      "mmmu:validation_Materials_30",
+      "mmmu:validation_Physics_7",
+      "mmlu-pro:10772",
+      "mmmu:validation_Manage_27",
+      "mmlu-pro:10874",
+      "mmmu:validation_Psychology_9",
+      "mmmu:validation_Economics_11",
+      "mmlu-pro:7244",
+      "mmmu:validation_Chemistry_17",
+      "mmmu:validation_Art_Theory_14",
+      "mmmu:validation_Public_Health_16",
+      "mmlu-pro:10796",
+      "mmmu:validation_Mechanical_Engineering_29",
+      "mmlu-pro:3477",
+      "mmmu:validation_Energy_and_Power_15",
+      "mmmu:validation_Literature_8",
+      "mmmu:validation_Geography_26",
+      "mmlu-pro:6683",
+      "mmmu:validation_Design_2",
+      "mmlu-pro:12096",
+      "mmmu:validation_Clinical_Medicine_26",
+      "mmmu:validation_Art_Theory_8",
+      "mmlu-pro:2125",
+      "mmmu:validation_Music_25",
+      "mmmu:validation_Agriculture_19",
+      "mmlu-pro:6427",
+      "mmlu-pro:7484",
+      "mmmu:validation_Computer_Science_1",
+      "mmmu:validation_Electronics_3",
+      "mmmu:validation_Finance_6",
+      "mmlu-pro:1034",
+      "mmmu:validation_Basic_Medical_Science_7",
+      "mmmu:validation_Clinical_Medicine_21",
+      "mmlu-pro:7361",
+      "mmlu-pro:9428",
+      "mmlu-pro:7034",
+      "mmlu-pro:1208",
+      "mmmu:validation_Marketing_21",
+      "mmmu:validation_Geography_29",
+      "mmmu:validation_Music_12",
+      "mmlu-pro:5232",
+      "mmlu-pro:10520",
+      "mmmu:validation_Architecture_and_Engineering_21",
+      "mmmu:validation_Computer_Science_5",
+      "mmlu-pro:4557",
+      "mmmu:validation_History_30",
+      "mmmu:validation_Electronics_22",
+      "mmmu:validation_Basic_Medical_Science_18",
+      "mmlu-pro:2334",
+      "mmlu-pro:11966",
+      "mmlu-pro:425",
+      "mmmu:validation_Public_Health_1",
+      "mmmu:validation_Materials_24",
+      "mmlu-pro:10862",
+      "mmlu-pro:5197",
+      "mmlu-pro:3276",
+      "mmmu:validation_Marketing_7",
+      "mmlu-pro:10122",
+      "mmmu:validation_Sociology_26",
+      "mmmu:validation_Math_21",
+      "mmlu-pro:7869",
+      "mmlu-pro:11781",
+      "mmmu:validation_Diagnostics_and_Laboratory_Medicine_19",
+      "mmmu:validation_Architecture_and_Engineering_9",
+      "mmlu-pro:10663",
+      "mmlu-pro:4847",
+      "mmlu-pro:6705",
+      "mmlu-pro:882",
+      "mmmu:validation_Computer_Science_30",
+      "mmlu-pro:9944",
+      "mmlu-pro:3787",
+      "mmlu-pro:9686",
+      "mmlu-pro:10946",
+      "mmlu-pro:2285"
+    ],
+    "coding": [
+      "HumanEval/64",
+      "HumanEval/47",
+      "HumanEval/52",
+      "HumanEval/146",
+      "HumanEval/118",
+      "HumanEval/82",
+      "HumanEval/71",
+      "HumanEval/86",
+      "HumanEval/85",
+      "HumanEval/124",
+      "HumanEval/87",
+      "HumanEval/102",
+      "HumanEval/28",
+      "HumanEval/142",
+      "HumanEval/10",
+      "HumanEval/54",
+      "HumanEval/95",
+      "HumanEval/160",
+      "HumanEval/127",
+      "HumanEval/77",
+      "HumanEval/45",
+      "HumanEval/9",
+      "HumanEval/114",
+      "HumanEval/29",
+      "HumanEval/143",
+      "HumanEval/135",
+      "HumanEval/73",
+      "HumanEval/94",
+      "HumanEval/88",
+      "HumanEval/106",
+      "HumanEval/0",
+      "HumanEval/141",
+      "HumanEval/125",
+      "HumanEval/68",
+      "HumanEval/44",
+      "HumanEval/42",
+      "HumanEval/21",
+      "HumanEval/24",
+      "HumanEval/11",
+      "HumanEval/79",
+      "HumanEval/49",
+      "HumanEval/72",
+      "HumanEval/144",
+      "HumanEval/138",
+      "HumanEval/137",
+      "HumanEval/119",
+      "HumanEval/129",
+      "HumanEval/62",
+      "HumanEval/5",
+      "HumanEval/136",
+      "HumanEval/51",
+      "HumanEval/157",
+      "HumanEval/126",
+      "HumanEval/134",
+      "HumanEval/76",
+      "HumanEval/154",
+      "HumanEval/96",
+      "HumanEval/67",
+      "HumanEval/22",
+      "HumanEval/41",
+      "HumanEval/55",
+      "HumanEval/90",
+      "HumanEval/99",
+      "HumanEval/4"
+    ]
+  },
+  "coding_paired_task_results": [
+    {
+      "task_id": "HumanEval/0",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/10",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/102",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/106",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/11",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/114",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/118",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/119",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/124",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/125",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/126",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/127",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/129",
+      "native_passed": false,
+      "candidate_passed": false
+    },
+    {
+      "task_id": "HumanEval/134",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/135",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/136",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/137",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/138",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/141",
+      "native_passed": true,
+      "candidate_passed": false
+    },
+    {
+      "task_id": "HumanEval/142",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/143",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/144",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/146",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/154",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/157",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/160",
+      "native_passed": false,
+      "candidate_passed": false
+    },
+    {
+      "task_id": "HumanEval/21",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/22",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/24",
+      "native_passed": true,
+      "candidate_passed": false
+    },
+    {
+      "task_id": "HumanEval/28",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/29",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/4",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/41",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/42",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/44",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/45",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/47",
+      "native_passed": false,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/49",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/5",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/51",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/52",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/54",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/55",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/62",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/64",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/67",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/68",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/71",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/72",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/73",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/76",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/77",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/79",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/82",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/85",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/86",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/87",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/88",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/9",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/90",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/94",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/95",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/96",
+      "native_passed": true,
+      "candidate_passed": true
+    },
+    {
+      "task_id": "HumanEval/99",
+      "native_passed": false,
+      "candidate_passed": true
+    }
+  ],
+  "general_accuracy_retention_threshold_proven": false,
+  "long_context_accuracy_tested": false,
+  "matched_exl3_k6_control_available": false,
+  "limits": [
+    "Selected public 64+64+64 tasks, not the complete benchmarks.",
+    "No contamination control; fixed generation budgets; unparsed or truncated missing answers score zero.",
+    "Equal aggregate scores conceal five losses and five gains.",
+    "This pilot cannot establish a general 87% or 90% native quality guarantee."
+  ]
+}

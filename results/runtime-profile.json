@@ -1,0 +1,103 @@
+{
+  "schema": "three-spark-public-runtime-profile.v1",
+  "historical_runtime_id": "hybrid-pollard-coop-targetK3-static5-v020-qos0-warm0",
+  "hardware": {
+    "nodes": 3,
+    "model": "NVIDIA DGX Spark",
+    "unified_memory_gb_per_node": 128,
+    "topology": "three direct QSFP links forming a triangle",
+    "engram_storage": "local NVMe"
+  },
+  "checkpoint": {
+    "repo": "deepseek-ai/DeepSeek-V4.1-Flash",
+    "revision": "fb2764a5cf321eaa5070ca8f9e892818f477c16d"
+  },
+  "routed_expert_checkpoint": {
+    "repo": "bot-lab-21/DeepSeek-V4.1-Flash-EXL3-3.5bpw-Pollard",
+    "revision": "f129e31a81e1337aa33e129e2d847fc7e37c8733"
+  },
+  "target_function_id": "sha256:598293f99398d279706acf183bb39a7dcee1439715ba31f4430d8ddec267f58a",
+  "routed_expert_layers": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+  ],
+  "stored_experts_per_layer": 384,
+  "logical_routed_experts_per_token": 3,
+  "native_routed_experts_per_token": 6,
+  "routing_applies_to": [
+    "prefill",
+    "decode",
+    "target_verify"
+  ],
+  "physical_routing_slots": 6,
+  "padding_expert_id": -1,
+  "padding_expert_weight": 0,
+  "cooperative_exl3_abi": 3,
+  "speculation": {
+    "method": "DSpark",
+    "static_block_size": 5
+  },
+  "parallelism": {
+    "tp": 3,
+    "ep": 3
+  },
+  "engram": {
+    "precision": "native FP8 E4M3 with UE8M0 scales",
+    "storage": "native rows repacked on local NVMe",
+    "weight_bytes_per_row": 256,
+    "scale_bytes_per_row": 8,
+    "row_pruning": false,
+    "additional_quantization": false
+  },
+  "native_vision_retained": true,
+  "serving": {
+    "context_length": 524288,
+    "full_token_pool": 4199936,
+    "max_running_requests": 8,
+    "chunked_prefill_size": 256,
+    "prefill_decode_interval": 0,
+    "enable_mixed_chunk": false,
+    "warm_prefix_observer": false,
+    "nvme_qos_during_measurement": 0
+  },
+  "public_rebuild_status": "ARM64 image build and component checks passed; the fresh public image has not repeated full-model GPU startup, quality, or throughput tests.",
+  "native_equivalence_claimed": false
+}

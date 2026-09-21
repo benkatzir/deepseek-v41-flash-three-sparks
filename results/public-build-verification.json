@@ -1,0 +1,19 @@
+{
+  "date_utc": "2026-09-21",
+  "kind": "fresh_public_image_build_and_cpu_preflight",
+  "image_id": "sha256:3c87dfdc86297885e1090963627cd69c312da2530e4166a5b2fe7a16f4df7711",
+  "platform": "linux/arm64",
+  "docker_build": "pass",
+  "build_steps": 28,
+  "source_lock_files_verified": 200,
+  "target_k3_preflight": "INSTALLED_ROUTING_COMPONENT_GATES_PASS",
+  "cooperative_preflight": "INSTALLED_COMPONENT_GATES_PASS",
+  "cooperative_library_sha256": "03bd748ab095ead7c380a07be4cc2ced3da0c1a65ac90838777181333693c06f",
+  "original_build_log_sha256": "532058697b0f58e29f4a0730ced5104f104882919e1d1ed37fc7b406f9d5af83",
+  "gpu_exposed_to_build_or_preflight": false,
+  "full_model_load_tested_on_this_image": false,
+  "quality_rebenchmarked_on_this_image": false,
+  "speed_rebenchmarked_on_this_image": false,
+  "interpretation": "Fresh reconstruction builds and retained component/source gates pass. Historical serving measurements belong to the original three images, not this image.",
+  "run_label_local_date": "2026-09-20"
+}

@@ -1,0 +1,90 @@
+{
+  "schema": "three-spark-public-source-hashes.v1",
+  "scope": "SHA-256 digests of the original local source artifacts used for these allowlist exports. Originals are not redistributed. Digests establish reference identity, not independent public verification of omitted raw data.",
+  "artifacts": {
+    "historical-profile-review": {
+      "sha256": "41eafb1cdc4e8bc9cc63eb69c53cfc2233496fff4714a458ad5a0cf99bbbe0cf",
+      "original_basename": "target-k3-v310-static5-current-review.json"
+    },
+    "historical-activation-review": {
+      "sha256": "591d23472eed8507f20305c557a5eca21350df293926eb5c51032a83231cd526",
+      "original_basename": "target-k3-v020-gamma5-activation.json"
+    },
+    "native-baseline-definition": {
+      "sha256": "8fe6820bef5473d27a9ae7c778f6506f0ae1e8ed424baa975f7fec08c78b153a",
+      "original_basename": "native-v5-baseline-definition-20260920.json"
+    },
+    "long-context-runtime-review": {
+      "sha256": "08b03bf6435718fe800ee53cd5002b6abccaf3f013b2dc4b6feb5ea69af0626f",
+      "original_basename": "runtime.json"
+    },
+    "short-vision-c1-summary": {
+      "sha256": "82161452c4e94e77b5a03342eda24563604822022208996b3a1c21311716345d",
+      "original_basename": "summary.json"
+    },
+    "short-vision-c6-summary": {
+      "sha256": "296e41550d9fa03f8daa0e2bd9a7c13bf63392a1990dd8a19b1345dda1075657",
+      "original_basename": "summary.json"
+    },
+    "short-vision-c6-stage-receipt": {
+      "sha256": "1e80739c4303accb8485af0fde5ce5d5a16a0dd33040cb201058ff46aebb4b92",
+      "original_basename": "stage-receipt.json"
+    },
+    "short-vision-c6-residency-join": {
+      "sha256": "f52ac13c211ba11d25dbbf9714a8367f099304dad8f03cc9ce3447b28429e9da",
+      "original_basename": "summary-with-residency.json"
+    },
+    "short-vision-c8-summary": {
+      "sha256": "4246a40f4526481703243bf9e8b29397906b8eed6bd6b3bc03a7a07c4aebcc5d",
+      "original_basename": "summary.json"
+    },
+    "short-vision-c8-stage-receipt": {
+      "sha256": "d5c031e98ccacbf577a0e733e97730062404917f39e7171f8307db621d2a656b",
+      "original_basename": "stage-receipt.json"
+    },
+    "short-vision-c8-residency-join": {
+      "sha256": "326d64a761db68ebb3e2e0b54844ba5213f7b419f844d44b11dc66adff15e0b5",
+      "original_basename": "summary-with-residency.json"
+    },
+    "quality-text-vision-paired": {
+      "sha256": "7d9e341ce03793e3adf8850136739a97cd48dd87cda34def5c8cf252ef7d5dab",
+      "original_basename": "text-vision.json"
+    },
+    "quality-coding-paired": {
+      "sha256": "10029526dfb14487067a3a0542b607e7c8c413062ae906aa0fc1c149ea1dfbff",
+      "original_basename": "coding.json"
+    },
+    "quality-candidate-summary": {
+      "sha256": "1b300a1b91c247afd080876767a4eadda28d58ef4f13637fe769e136253c62f2",
+      "original_basename": "candidate-summary.json"
+    },
+    "quality-text-vision-manifest": {
+      "sha256": "7e1f8e05f705b2bd3a0842bb97d4ebc61376b4c753c4096decf55275816f5bcf",
+      "original_basename": "manifest.json"
+    },
+    "quality-coding-manifest": {
+      "sha256": "62cd0d185dcdba12db0a88cc5103483a5026599ab90f600b94dc568b20464d56",
+      "original_basename": "manifest.json"
+    },
+    "long-context-c6-frozen-audit": {
+      "sha256": "7fcbf4801aaddaeebd3aa3d869defa5dced56ecad8a1773bce0e1fcfe3cb9e63",
+      "original_basename": "long500k-k3-c6-frozen-audit-20260920.json"
+    },
+    "long-context-c6-supplemental-analysis": {
+      "sha256": "e966f0044ce9946e848f254da3408a710a3cf5d3f68ff962d269c6fd08679524",
+      "original_basename": "long500k-k3-c6-supplemental-analysis-20260920.json"
+    },
+    "long-context-c6-content-review": {
+      "sha256": "3414d03b19462d0fc16e93d2a6aa0bbd797d0bf22f8994205e9d17c4a930fce9",
+      "original_basename": "long500k-k3-c6-reply-content-independent-review-20260920.json"
+    },
+    "long-context-c8-cancellation": {
+      "sha256": "42e3b4110661123d5cf09e366211b984f1e92b19131817fc2291fdfb8e0447a9",
+      "original_basename": "closure.json"
+    },
+    "long-context-test-manifest": {
+      "sha256": "db01e56cb7509336e73c7c7cd6778965312e0b86e7e232a5f1bf1b67635a87b7",
+      "original_basename": "manifest.json"
+    }
+  }
+}
